@@ -20,3 +20,9 @@ figure(2)
 img_esc =imresize(img,[500,1000]);%factor de escala
 figure(3)
 %imshow(img_esc);
+
+%inclinacion
+forma = affine2d([1 1 0;0.5 1 0; 0 1 1]);%MATRIZ DE FORMA
+img_warp = imwarp(img,forma);
+figura(4)
+imshow(img_warp)
